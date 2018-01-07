@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Arabic  -->
+    <string name="app_name">اي شي</string>
+    <string name="about">عن التطبيق</string>
+    <string name="share">انشر التطبيق</string>
+    <string name="shareTxt">
+      طالع مع أصدقائك بتروحون مطعم او قهوة اول سؤال يكون وين نروح طبعا الاجابة   اي شي
+     \n
+        حمل التطبيق من الرابط
+      \n
+        https://play.google.com/store/apps/details?id=com.mazprojects.aeshae
+        
+    </string>
+    <string name="action_settings">Settings</string>
+    
+    
+      <!-- Main Activity Strings  -->
+      
+    <string name="selectTxt">اختر</string>
+    <string name="cafeTx">قهوة</string>
+    <string name="restaurantTx">مطعم</string>
+    
+    <string name="pressTxt">اضغط</string>
+    <string name="destinceNumTxt">5</string>
+    <string name="destinceTxt">المسافه</string>
+    <string name="description"> YOUR_DESCRIPTION_HERE </string>
+    <string name="kmTxt"> كم </string>
+    
+    <!-- error commants  -->
+    
+    <string name="noNetwarktx"> غير متصل بالشبكة </string>
+    <string name="noGPStx"> لا يمكن تحديد موقعك </string>
+    <string name="zeroNotavalibaltx"> لا يمكنك من اختيار المسافه 0 </string>
+       <string name="serviceNotAvatx"> لا يمكن الاتصال بالخدمة </string>
+    
+       
+     <!-- Result dilog Strings  -->
+    
+      <string name="backTx"> عوده </string>
+      <string name="infoTx"> i </string>
+      <string name="dirctionTx"> الموقع </string>
+      <string name="shareVenueTx">\n
+           لقد تم اختيار المطعم او القهوة عشوائيا عن طريق تطبيق اي شي
+          \n
+          لتحميل التطبيق من الرابط
+          \n 
+          https://play.google.com/store/apps/details?id=com.mazprojects.aeshae
+           </string>
+  
+    <!-- ads ID  -->
+        <string name="banner_ad_unit_id">ca-app-pub-8699743792265187/2121047157</string>
+
+    <string name="title_activity_navigation">Navigat</string>
+
+
+    <string name="title_activity_info_aactivity">Info</string>
+
+
+</resources>

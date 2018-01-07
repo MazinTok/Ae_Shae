@@ -1,0 +1,113 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbars="vertical"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+     <!-- android:adjustViewBounds="true"
+        android:baselineAlignBottom="true"
+        android:cropToPadding="true"
+        android:scaleType="fitXY" -->
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="88dp"
+        android:textOff="@string/cafeTx"
+        android:textOn="@string/restaurantTx" />
+
+    <TextView
+        android:id="@+id/selectTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/switch1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="@string/selectTxt"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/destinceTxt"
+        android:layout_centerHorizontal="true"
+        android:progress="5"
+       
+         android:max="10" />
+    
+     <ImageButton
+         android:id="@+id/imgOne"
+         android:layout_width="100dp"
+         android:layout_height="100dp"
+         android:layout_below="@+id/pressTxt"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="15dp"
+         android:background="@drawable/logotrasn"
+         android:contentDescription="@string/description"
+         android:scaleType="fitXY"
+         android:adjustViewBounds="false"
+         android:src="@drawable/logotrasn" />
+
+     <TextView
+         android:id="@+id/destinceTxt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/switch1"
+         android:layout_marginTop="20dp"
+         android:layout_toRightOf="@+id/destinceNumTxt"
+         android:paddingLeft="10dp"
+         android:text="@string/destinceTxt"
+         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+     <TextView
+         android:id="@+id/kmtv"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/seekBar1"
+         android:layout_toLeftOf="@+id/destinceNumTxt"
+         android:paddingRight="10dp"
+         android:text="@string/kmTxt"
+         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+     <TextView
+         android:id="@+id/pressTxt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+       
+         android:layout_below="@+id/seekBar1"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="26dp"
+         android:text="@string/pressTxt"
+         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+     <TextView
+         android:id="@+id/destinceNumTxt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/seekBar1"
+         android:layout_centerHorizontal="true"
+         android:text="@string/destinceNumTxt"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+
+   
+</RelativeLayout>

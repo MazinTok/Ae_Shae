@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\mazoo_000\AeShae\app\libs\ksoap2-android-assembly-3.0.0-jar-with-dependencies.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="224c93f1824fa17b96db7250c2e5e2703d45e052">
+        <dex dex="C:\Users\mazoo_000\AeShae\app\build\intermediates\pre-dexed\debug\ksoap2-android-assembly-3.0.0-jar-with-dependencies-c419e10e5095d0b763fa9fdd7ecc4b499eb957fa.jar" />
+    </item>
+    <item
+        jar="C:\Users\mazoo_000\AeShae\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="C:\Users\mazoo_000\AeShae\app\build\intermediates\pre-dexed\debug\classes-b367afb574decaeb8fa064aae9d5722daae4a656.jar" />
+    </item>
+    <item
+        jar="C:\Users\mazoo_000\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="C:\Users\mazoo_000\AeShae\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-70cc4915f27f93540a6188959025707b564e88c9.jar" />
+    </item>
+    <item
+        jar="C:\Users\mazoo_000\AeShae\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.11\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0f700f6802ba1a1f1fa7ac26d5db0666a89d75a6">
+        <dex dex="C:\Users\mazoo_000\AeShae\app\build\intermediates\pre-dexed\debug\classes-e28e466942d6a08355ec3f09cebcaf5c439fd4e4.jar" />
+    </item>
+    <item
+        jar="C:\Users\mazoo_000\AeShae\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="C:\Users\mazoo_000\AeShae\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-1a5ecc083efcf54aed6a75d87a54f1791fa62bc9.jar" />
+    </item>
+
+</items>

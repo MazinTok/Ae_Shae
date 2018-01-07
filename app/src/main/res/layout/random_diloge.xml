@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:ads="http://schemas.android.com/apk/res-auto"
+      android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+     
+      >
+
+    <LinearLayout
+      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp" 
+             android:background="#341558"
+             >
+     
+        <ImageButton
+            android:id="@+id/shareVenButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+           
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+           
+            android:background="@drawable/sharelogo" />
+
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/ExitBtn"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/xmark"
+                android:layout_marginLeft="10dp" />
+
+        </RelativeLayout>
+          
+           <TextView
+               android:id="@+id/VenueTital"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:gravity="center"
+               android:textAppearance="?android:attr/textAppearanceLarge" />
+           
+    <TextView
+        android:id="@+id/VenueInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:autoLink="phone"
+        android:gravity="center" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp" >
+
+<Button
+    android:id="@+id/NavBot"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_alignWithParentIfMissing="false"
+    android:layout_centerInParent="false"
+    android:background="@drawable/maps"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+
+    android:layout_marginLeft="10dp" />
+
+    <Button
+        android:id="@+id/InfoBot"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginRight="15dp"
+        android:background="#341558"
+        android:text="@string/infoTx"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/backBot"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/reload"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+
+   
+  
+   
+ </LinearLayout>
+
+  
+</RelativeLayout>

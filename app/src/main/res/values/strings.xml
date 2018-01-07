@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- English  -->
+    <string name="app_name"> Ae shae </string>
+    <string name="about">ع التطبيق</string>
+    <string name="share">share it with your friends</string>
+    <string name="shareTxt">Going for a quick cup of coffee or a bite with your 
+        friends and you dont know where to go Ae Shae will randomly select a cafe or 
+        restaurant for you
+        \n
+        Download it from the link below \n
+        https://play.google.com/store/apps/details?id=com.mazprojects.aeshae </string>
+    <string name="action_settings">Settings</string>
+    
+      <!-- Main Activity Strings  -->
+    <string name="selectTxt">Select</string>
+    <string name="cafeTx">Cafe</string>
+    <string name="restaurantTx">Restaurant</string>
+ 
+    <string name="pressTxt">Press</string>
+    <string name="destinceNumTxt">5</string>
+    <string name="destinceTxt"> km</string>
+    <string name="description"> YOUR_DESCRIPTION_HERE </string>
+    <string name="kmTxt"> Distance </string>
+    
+    <!-- error commants  -->
+    <string name="noNetwarktx"> Network unavailable </string>
+    <string name="noGPStx"> Can not get your Location  </string>
+    <string name="zeroNotavalibaltx"> you have to choice more than 0 Destance </string>
+    <string name="serviceNotAvatx"> لا يمكن الاتصال بالخدمة </string>
+    
+    
+     <!-- Result dilog Strings  -->
+    
+      <string name="backTx"> Back </string>
+      <string name="infoTx"> i </string>
+      <string name="dirctionTx"> Direction </string>
+     <string name="shareVenueTx"> 
+          \n
+          This Restaurant or Cafe been selected Randomly by AeSHae App 
+          \n
+          https://play.google.com/store/apps/details?id=com.mazprojects.aeshae
+           </string>
+    
+      <!-- ads ID  -->
+        <string name="banner_ad_unit_id">ca-app-pub-8699743792265187/2121047157</string>
+    <string name="title_activity_navigation">Navigat</string>
+
+
+    <string name="title_activity_info_aactivity">Info</string>
+     
+        
+    
+</resources>
