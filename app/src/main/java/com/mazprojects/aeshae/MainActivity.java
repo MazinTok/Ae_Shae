@@ -1,30 +1,18 @@
 package com.mazprojects.aeshae;
- 
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-import java.util.Random;
- 
-
-import org.apache.http.client.ClientProtocolException;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnShowListener;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
@@ -34,31 +22,44 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-//import android.util.Log;
+import android.support.v4.app.ActivityCompat;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.app.Activity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View.OnClickListener;
-import android.view.Window;
 
-import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
+import org.apache.http.client.ClientProtocolException;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+import java.util.Random;
+
+//import android.util.Log;
 //import com.google.android.gms.ads.AdListener;
 //import com.google.android.gms.ads.AdRequest;
 //import com.google.android.gms.ads.AdView;
 //import com.google.android.gms.ads.InterstitialAd;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends Activity {
@@ -185,6 +186,8 @@ public class MainActivity extends Activity {
 
 	public void buttenPreesed()
     {
+        if (!loc.checkLocationPermission(this))
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         // Perform action on click
         loc.getLocation();
         longitude =loc.lang;
@@ -200,7 +203,8 @@ public class MainActivity extends Activity {
                 new GetVenues().execute(Integer.toString(destanceTemp));
             }
             catch(Exception e){
-                //Toast.makeText(MainActivity.this ,e.toString(),Toast.LENGTH_LONG).show();
+
+				Log.e("error", e.toString());  //Toast.makeText(MainActivity.this ,e.toString(),Toast.LENGTH_LONG).show();
             }
         }
         else if(! isNetworkAvailable())
@@ -335,8 +339,8 @@ public void RandomSelect() throws ClientProtocolException, IOException
 					
 					 VenTit.setText(LVenues.get(i).getName());
 					 VenInfo.setText(LVenues.get(i).getCity());
-					  AsyncCallWS  task = new AsyncCallWS();
-				        task.execute(LVenues.get(i).getName(),LVenues.get(i).getLatitude(),LVenues.get(i).getLongitude(),LVenues.get(i).getCity());
+//					  AsyncCallWS  task = new AsyncCallWS();
+//				        task.execute(LVenues.get(i).getName(),LVenues.get(i).getLatitude(),LVenues.get(i).getLongitude(),LVenues.get(i).getCity());
 			 }
 			 catch(Exception e){
 				 //Toast.makeText(this ,e.toString(),Toast.LENGTH_LONG).show();
@@ -505,7 +509,7 @@ public void RandomSelect() throws ClientProtocolException, IOException
 	                         name = c.getString(TAG_NAME);
 	                         JSONArray ob = (JSONArray) c.get("categories");
 	                         JSONObject obLoc = (JSONObject) c.get("location");	                        
-	                         JSONObject obPho = (JSONObject) c.get("contact");
+	                     //    JSONObject obPho = (JSONObject) c.get("contact");
 		                     
 	                       //  Log.i(TAG, name);
 	                         JSONObject c2 =ob.getJSONObject(0);
@@ -515,8 +519,8 @@ public void RandomSelect() throws ClientProtocolException, IOException
 	                         venue.setName(name);
 	                         venue.setLatitude(obLoc.getString("lat"));
 	                         venue.setLongitude(obLoc.getString("lng"));
-	                         if (! obPho.isNull("phone"))
-	                         venue.setCity(obPho.getString("phone"));
+	                     //    if (! obPho.isNull("phone"))
+	                    //     venue.setCity(obPho.getString("phone"));
 	                       
 	                        boolean temp = sw.isChecked();
 	                        String temp1 = c2.getString("id");
@@ -538,7 +542,8 @@ public void RandomSelect() throws ClientProtocolException, IOException
 	                    }
 	                } catch (JSONException e) {
 	                   // e.printStackTrace();
-	                    //Toast.makeText(MainActivity.this ,"لا يمكن الاتصال بالانترنت",T oast.LENGTH_LONG).show(); 
+	                    //Toast.makeText(MainActivity.this ,"لا يمكن الاتصال بالانترنت",T oast.LENGTH_LONG).show();
+	                    Log.d("error", e.toString());
 	                    LVenues.clear();
 	                }
 	            } else {

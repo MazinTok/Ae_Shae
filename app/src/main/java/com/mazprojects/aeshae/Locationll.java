@@ -1,6 +1,10 @@
 package com.mazprojects.aeshae;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.pm.PackageManager;
+
+import static android.support.v4.content.PermissionChecker.checkCallingOrSelfPermission;
 
 public class Locationll {
 
@@ -105,5 +109,14 @@ public class Locationll {
 		
 		return lang != 0 && let != 0;
 	}
+
+    public boolean checkLocationPermission(Context context)
+    {
+     //   PackageManager pm = getPackageManager();
+        String permission = "android.permission.ACCESS_FINE_LOCATION";
+
+        int res = checkCallingOrSelfPermission(context , permission);
+        return (res == PackageManager.PERMISSION_GRANTED);
+    }
 }
 

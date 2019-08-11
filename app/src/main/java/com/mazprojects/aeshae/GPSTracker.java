@@ -8,6 +8,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
 //import android.util.Log;
 //import android.widget.Toast;
 
@@ -53,6 +54,7 @@ public class GPSTracker extends Service implements LocationListener
 
     public Location getLocation()
     {
+
         try
         {
             locationManager = (LocationManager) mContext.getSystemService(LOCATION_SERVICE);
@@ -116,7 +118,7 @@ public class GPSTracker extends Service implements LocationListener
         catch (Exception e)
         {
             //e.printStackTrace();
-            //Log.e("Error : Location", "Impossible to connect to LocationManager", e);
+            Log.e("Error : Location", "Impossible to connect to LocationManager", e);
         	
         }
 

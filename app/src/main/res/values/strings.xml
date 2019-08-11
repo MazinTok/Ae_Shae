@@ -48,7 +48,7 @@
 
 
     <string name="title_activity_info_aactivity">Info</string>
-     
-        
-    
+    <string name="notification_error_ssl_cert_invalid">error_ssl_cert_invalid</string>
+
+
 </resources>
